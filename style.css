@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 0 0;
+    padding: 15px;
+    background-color: grey;
+    text-wrap: nowrap;
+    transition: all 0.5s ease-in-out
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    gap: 25px;
+    transition: all 0.5s ease-in-out
+}
+
+nav a {
+    transition: all 0.5s ease-in-out
+}
+
+@media (min-width: 1024px) {
+    header{
+        padding: 15px 15% 15px 15px;
+    }
+
+    nav {
+        gap: 150px;
+    }
+
+    /* nav a {
+        margin-right: 200px;
+    } */
+}
