@@ -1,38 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    src: url(/assets/fonts/Mona_Sans/MonaSans-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+}
+
+a:visited {
+    color: hsl(89, 0%, 40%);
+}
+
+body {
+    font-family: 'Mona Sans';
+}
+
 header {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 0 0 0;
     padding: 15px;
     background-color: hsl(89, 0%, 93%);
     color: hsl(89, 0%, 40%);
     text-wrap: nowrap;
-    transition: all 0.5s ease-in-out
+    transition: all 0.5s ease-in-out;
 }
 
 nav {
     display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nav-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 18%);
+}
+
+.nav-links {
+    display: flex;
     justify-content: flex-end;
-    width: 50%;
     gap: 25px;
-    transition: all 0.5s ease-in-out
 }
 
 nav a {
+    font-size: 1.2rem;
     color: hsl(89, 0%, 40%);
-    transition: all 0.5s ease-in-out
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    min-height: 300px;
+    background-color: hsl(189, 28%, 82%);
+}
+
+main img {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+main p {
+    padding: 25px;
+    font-size: 1.1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 200px;
+    padding: 15px;
+    gap: 50px;
+    background-color: rgb(235, 235, 235);
 }
 
 @media (min-width: 1024px) {
-    header{
+    * {
+        transition: all 0.5s ease-in-out
+    }
+
+    header {
         padding: 15px 15% 15px 15px;
     }
 
     nav {
+        justify-content: space-around;
+        gap: 450px;
+    }
+
+    .nav-links {
         gap: 150px;
     }
 
-    /* nav a {
-        margin-right: 200px;
-    } */
+    footer {
+        flex-direction: row;
+    }
 }
