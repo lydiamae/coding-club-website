@@ -10,8 +10,14 @@
     font-weight: normal;
 }
 
-a:visited {
+a, a:visited {
+    text-decoration: underline;
+    font-weight: 600;
     color: hsl(89, 0%, 40%);
+}
+
+a:hover {
+    color: hsl(0, 0%, 16%);
 }
 
 body {
@@ -34,7 +40,7 @@ nav {
 }
 
 .nav-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: hsl(0, 0%, 18%);
 }
@@ -46,7 +52,7 @@ nav {
 }
 
 nav a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: hsl(89, 0%, 40%);
 }
 
@@ -64,18 +70,91 @@ main img {
 
 main p {
     padding: 25px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 footer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 200px;
-    padding: 15px;
-    gap: 50px;
+    flex: 1 1 0;
+    justify-content: space-evenly;
+    align-items: baseline;
+    min-height: 220px;
+    padding: 28px;
+    gap: 30px;
     background-color: rgb(235, 235, 235);
+}
+
+footer section {
+    flex: 1 0 50%;
+}
+
+footer h3 {
+    padding-bottom: 12px;
+}
+
+footer p {
+    width: auto;
+}
+
+address {
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+form p {
+    padding: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+
+input:not([type=radio]), textarea {
+    margin: 0.25rem 0 1.25rem 0;
+}
+
+input:not([type=radio]), textarea {
+    min-height: 25px;
+    width: 300px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+fieldset {
+    background-color: hsl(189, 28%, 89%);
+    border: 1px solid #818181;
+    width: 300px;
+    padding: 10px 10px 20px 10px;
+    text-align: left;
+}
+
+fieldset label {
+    display: inline;
+    padding-left: 5px;
+}
+
+fieldset input {
+    width: 20px;
+}
+
+.fieldset-option {
+    padding-left: 15px;
+
+}
+
+button {
+    width: 75px;
+    padding: 5px;
+    margin: 30px 25px 25px 30px;
 }
 
 @media (min-width: 1024px) {
