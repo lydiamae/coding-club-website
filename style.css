@@ -57,6 +57,9 @@ nav a {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     width: 100%;
     min-height: 300px;
@@ -106,8 +109,9 @@ form {
     align-items: baseline;
 }
 
-form p {
-    padding: 20px;
+form h1, form p {
+    padding: 20px 20px 20px 0;
+    text-align: left;
 }
 
 label {
