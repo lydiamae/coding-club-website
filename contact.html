@@ -20,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <form>
+        <form id="form" novalidate>
             <h1>Contact Form</h1>
             <p>
                 We welcome all questions and comments!
@@ -30,32 +30,33 @@
             </p>
             <section>
                 <label for="name">Name: *</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" autocomplete="name">
             </section>
             <section>
                 <label for="email">E-mail: *</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" autocomplete="email">
             </section>
             <section>
                 <label for="message">Message: *</label>
-                <textarea name="message" id="message" required></textarea>
+                <textarea name="message" id="message"></textarea>
             </section>
             <section>
                 <fieldset>
                     <legend>Do you require a response?: *</legend>
                     <div class="fieldset-option">
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="radio" value="Yes">
+                        <label for="radio-y">Yes</label>
+                        <input type="radio" name="response" value="Yes" id="radio-y">
                     </div>
                     <br>
                     <div class="fieldset-option">
-                        <label for="no">No</label>
-                        <input type="radio" name="radio" value="No">
+                        <label for="radio-n">No</label>
+                        <input type="radio" name="response" value="No" id="radio-n">
                     </div>
                 </fieldset>
             </section>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
         </form>
     </main>
+    <script src="/contact-form-validation.js"></script>
 </body>
 </html>
