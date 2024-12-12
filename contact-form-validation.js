@@ -10,7 +10,7 @@ const submit = document.getElementById('submit');
 const match = {
     name: /[a-zA-Z]/,
     email: /[a-zA-Z0-9_\-\.]{2,}[@][a-zA-Z0-9_\-]{2,}[\.][a-zA-Z0-9_\-\.]{2,}/
-}
+};
 
 submit.addEventListener('click', event => {
     // log that the submit button was clicked
@@ -34,6 +34,16 @@ submit.addEventListener('click', event => {
         // log that there were no errors with the form
         console.log('Successful submit event occured.');
 
+        const inputFinal = {
+            nameFinal: name.value, 
+            emailFinal: email.value,
+            msgFinal: msg.value,
+            radioYFinal: radioY.checked
+        };
+
+        console.log(inputFinal);
+        // event.preventDefault();
+
         // if a response is required, display a message
         if (radioY.checked) {
             alert('Form succesfully submitted! A response will be sent to to the e-mail address you entered.');
@@ -44,7 +54,7 @@ submit.addEventListener('click', event => {
             alert('Form succesfully submitted! Thank you for your message.');
         }
     }
-})
+});
 
 // returns a list of all current form input errors
 function populateErrList(errList) {
@@ -60,10 +70,11 @@ function populateErrList(errList) {
     }
 
     // if email field is not empty but input is not valid, add to list of errors to be displayed
-    if (!match.email.test(email.value)) {
-        errList.push('\n Enter a valid e-mail address')
+    if (email.value.trim() != '' && !match.email.test(email.value)) {
+        errList.push('\n Enter a valid e-mail address');
     }
 
+    // if message field is empty, or is not of valid length, add to list of errors to be displayed
     if ((msg.value.trim() === '') || (msg.value.length < 4) || (msg.value.length > 1000)) {
         errList.push('\n Enter a message that is between 4 and 1000 characters');
     }
