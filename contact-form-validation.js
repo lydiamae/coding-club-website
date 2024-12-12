@@ -12,6 +12,23 @@ const match = {
     email: /[a-zA-Z0-9_\-\.]{2,}[@][a-zA-Z0-9_\-]{2,}[\.][a-zA-Z0-9_\-\.]{2,}/
 };
 
+// update the character counter when textarea input changes
+message.oninput = () => {
+    const msgMaxChar = 1000;
+    let charCountDisplay = document.querySelector('.char-count');
+    let charCount = msg.value.length;
+    
+    // update the character counter
+    charCountDisplay.textContent = charCount;
+
+    // if the amount of characters exceeds the maximum value accepted, make the text red
+    if (charCount > msgMaxChar) {
+        charCountDisplay.style.color = 'red';
+    } else {
+        charCountDisplay.style.color = 'black';
+    }
+};
+    
 submit.addEventListener('click', event => {
     // log that the submit button was clicked
     console.log('Submit event occured.');

@@ -128,7 +128,33 @@ input:not([type=radio]), textarea {
     width: 300px;
 }
 
-textarea {
+.message-container {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: repeat(2);
+    width: 300px;
+    grid-column-gap: 40px;
+    /* background-color: red; */
+}
+
+.message-container label {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.message-container summary {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.9rem;
+}
+
+.char-count {
+    display: inline;
+}
+
+.message-container textarea {
+    grid-column: 1 / span 2;
+    grid-row: 2;
     min-height: 100px;
     resize: vertical;
 }
