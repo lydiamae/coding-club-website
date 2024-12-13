@@ -1,7 +1,7 @@
 
 # Group (WIS) Website
 
-This project aims to serve as a public-facing website for a group or club at a university, so that anyone interested in the group a place to get more information and/or contact the organization.
+This project aims to serve as a public-facing website for a group or club at a university, so that anyone interested in the group has a place to get more information and/or contact the organization.
 
 ## Features
 
